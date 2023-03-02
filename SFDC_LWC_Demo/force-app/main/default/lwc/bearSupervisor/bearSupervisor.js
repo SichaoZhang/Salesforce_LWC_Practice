@@ -1,9 +1,13 @@
 import { LightningElement, api, wire } from 'lwc';
 import { getRecord, getFieldValue } from 'lightning/uiRecordApi';
-// Import Bear object fields　
-import SUPERVISOR_FIELD from '@salesforce/schema/Bear__c.Supervisor__c';
+// Import Bear object fields　（object　fieldsの指定方法は下記の２つがある、どれでも問題なく使える）
 
-//監督者(スーパーバイザー)データを保持。
+// object　fieldsの指定方法１
+// import SUPERVISOR_FIELD from '@salesforce/schema/Bear__c.Supervisor__c';　
+// object　fieldsの指定方法２ 
+const SUPERVISOR_FIELD = 'Bear__c.Bear__c.Supervisor__c';
+
+//監督者(スーパーバイザー)配列定義。
 const bearFields = [SUPERVISOR_FIELD];
 
 export default class BearSupervisor extends LightningElement {
