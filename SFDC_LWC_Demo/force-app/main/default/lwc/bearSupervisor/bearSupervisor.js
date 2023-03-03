@@ -5,7 +5,7 @@ import { getRecord, getFieldValue } from 'lightning/uiRecordApi';
 // object　fieldsの指定方法１
 // import SUPERVISOR_FIELD from '@salesforce/schema/Bear__c.Supervisor__c';　
 // object　fieldsの指定方法２ 
-const SUPERVISOR_FIELD = 'Bear__c.Bear__c.Supervisor__c';
+const SUPERVISOR_FIELD = 'Bear__c.Supervisor__c';
 
 //監督者(スーパーバイザー)配列定義。
 const bearFields = [SUPERVISOR_FIELD];

@@ -26,6 +26,17 @@
 				value={greeting}
 				onchange={handleGreetingChange}
 			></lightning-input>
+
+			<template for:each={bears} for:item="bear">
+				<lightning-layout-item key={bear.Id} size="3" class="slds-var-p-around_x-small">
+					<!-- Start bear tile -->
+					<div class="slds-media__body">
+						<p class="slds-var-m-bottom_xx-small">{bear.Name}</p>
+					</div>
+					<!-- End bear tile -->
+				</lightning-layout-item>
+			</template>
+
 		</div>
 	</lightning-card>
 </template>
